@@ -9,13 +9,13 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="208dp"
-        android:layout_height="122dp"
+        android:layout_width="171dp"
+        android:layout_height="107dp"
         android:layout_marginTop="32dp"
         android:text="Welcome Back"
         android:textAllCaps="false"
         android:textColor="@color/primary_text"
-        android:textSize="50sp"
+        android:textSize="40sp"
         app:layout_constraintStart_toStartOf="@+id/edit_login_email"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -58,14 +58,14 @@
         app:layout_constraintTop_toTopOf="@+id/checkbox_rememberme" />
 
     <life.sabujak.roundedbutton.RoundedButton
-        android:id="@+id/btnLogin"
+        android:id="@+id/button_login"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/nunito_regular"
         android:gravity="center"
-        android:text="Login"
+        android:text="Log in"
         android:textColor="@color/tertiary_text"
         android:textSize="18sp"
         app:buttonColor="@color/button_outline_brown"
@@ -75,18 +75,18 @@
         app:layout_constraintTop_toBottomOf="@+id/checkbox_rememberme" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/text_get_started"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="64dp"
         android:fontFamily="@font/nunito_light"
         android:text="@string/get_started"
         android:textColor="@color/secondary_text"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/btnLogin"
-        app:layout_constraintStart_toStartOf="@+id/btnLogin"
-        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+        app:layout_constraintEnd_toEndOf="@+id/button_login"
+        app:layout_constraintStart_toStartOf="@+id/button_login"
+        app:layout_constraintTop_toBottomOf="@+id/button_login" />
 
     <com.rengwuxian.materialedittext.MaterialEditText
         android:id="@+id/edit_login_password"
