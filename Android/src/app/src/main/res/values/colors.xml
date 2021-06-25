@@ -9,6 +9,7 @@
     <color name="accent">#fbc900</color>
 
     <color name="primary_background">#14F4F3F3</color>
+    <color name="status_bar">#14F4F3F3</color>
 
     <color name="primary_text">#682117</color>
     <color name="secondary_text">#686e77</color>
