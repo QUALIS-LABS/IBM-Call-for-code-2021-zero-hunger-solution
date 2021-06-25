@@ -107,7 +107,7 @@
         android:layout_width="174dp"
         android:layout_height="76dp"
         android:layout_gravity="center"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/user_metrics_shape"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -213,6 +213,7 @@
     </LinearLayout>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
         android:layout_width="match_parent"
         android:layout_height="230dp"
         android:layout_marginStart="8dp"
@@ -229,27 +230,37 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="8dp"
-            android:fontFamily="@font/nunito_bold"
-            android:text="2021"
-            android:textAllCaps="false"
-            android:textColor="@color/primary_text"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="8dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="2021"
+                android:textAllCaps="false"
+                android:textColor="@color/primary_text"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
-        <com.github.mikephil.charting.charts.LineChart
-            android:id = "@+id/linechart_userprofile"
-            android:layout_margin="8dp"
-            android:layout_width = "fill_parent"
-            android:layout_height = "fill_parent" />
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/linechart_userprofile"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="8dp" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
     </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_baseline_settings_suggest_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
