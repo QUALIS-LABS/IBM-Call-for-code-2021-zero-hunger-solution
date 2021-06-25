@@ -24,8 +24,6 @@ import com.qualislabs.mashinani.databinding.ActivityHomeBinding;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    private AppBarConfiguration mAppBarConfiguration;
-    private ActivityHomeBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +70,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         }  else if (id == R.id.nav_metrics) {
 
         } else if (id == R.id.nav_account) {
+            Intent intent =  new Intent(HomeActivity.this, UserProfileActivity.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_payment) {
 
