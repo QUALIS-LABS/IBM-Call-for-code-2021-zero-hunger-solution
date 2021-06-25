@@ -10,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Mashinani">
-        <activity android:name=".UserProfileActivity"></activity>
+        <activity android:name=".HistoryActivity"></activity>
+        <activity android:name=".UserProfileActivity" />
         <activity
             android:name=".HomeActivity"
             android:label="@string/title_activity_home"

@@ -24,6 +24,7 @@ import com.qualislabs.mashinani.databinding.ActivityHomeBinding;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
+    TextView mTextViewSeeAllEntries;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +46,16 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         //name for the user
         View headerview = navigationView.getHeaderView(0);
+
+
+        mTextViewSeeAllEntries = (TextView)findViewById(R.id.txt_sell_all_schedule);
+        mTextViewSeeAllEntries.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =  new Intent(HomeActivity.this, HistoryActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
