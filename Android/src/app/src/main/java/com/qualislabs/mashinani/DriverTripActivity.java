@@ -25,10 +25,6 @@ public class DriverTripActivity extends AppCompatActivity implements OnMapReadyC
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_driver_trip);
 
-
-        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-
-        }
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.fragment_driver_map);
         mapFragment.getMapAsync(this);
