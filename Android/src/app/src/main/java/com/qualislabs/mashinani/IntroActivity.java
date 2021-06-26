@@ -30,7 +30,7 @@ public class IntroActivity extends AppCompatActivity {
         mRoundedButtonDriver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(IntroActivity.this, TraderDispatchTrackingActivity.class);
+                Intent intent = new Intent(IntroActivity.this, DriverTripActivity.class);
                 startActivity(intent);
             }
         });
