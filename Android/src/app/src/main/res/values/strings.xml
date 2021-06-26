@@ -27,4 +27,9 @@
     <string name="feedback_sheet">Feedback Sheet</string>
     <string name="rate_delivery">Rate Delivery</string>
     <string name="notes_on_delivery">Notes on Delivery</string>
+    <string name="driver_tracking">Driver Tracking</string>
+    <string name="log_pickup">Log Pickup</string>
+    <string name="finish">Finish</string>
+    <string name="report_problem">Report Problem</string>
+    <string name="driver_real_time_location">Driver\'s Real-Time Location</string>
 </resources>

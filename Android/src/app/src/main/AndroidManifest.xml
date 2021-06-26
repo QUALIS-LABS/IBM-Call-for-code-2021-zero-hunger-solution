@@ -10,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Mashinani">
-        <activity android:name=".TraderFeedbackActivity"></activity>
+        <activity android:name=".TraderDispatchTrackingActivity"></activity>
+        <activity android:name=".TraderFeedbackActivity" />
         <activity android:name=".GoodsPickupActivity" />
         <activity android:name=".DriverProblemReportActivity" />
         <activity android:name=".HistoryActivity" />
