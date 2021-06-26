@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_margin="8dp"
     android:background="@drawable/home_linear_layout_outline"
-    tools:context=".TraderDispatchTrackingActivity">
+    tools:context=".DriverTripActivity">
 
     <TextView
         android:id="@+id/textView9"
@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/nunito_bold"
-        android:text="@string/driver_tracking"
+        android:text="Trip Details"
         android:textAllCaps="false"
         android:textColor="@color/primary_text"
         android:textSize="20sp"
@@ -29,7 +29,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/nunito_regular"
-        android:text="@string/driver_real_time_location"
+        android:text="Make sure you collect all goods"
         android:textAllCaps="false"
         android:textColor="@color/secondary_text"
         android:textSize="18sp"
@@ -38,39 +38,22 @@
         app:layout_constraintStart_toStartOf="@+id/textView9"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/fragment_driver_map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        tools:context="com.qualislabs.mashinani.DriverTripActivity"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:fontFamily="@font/nunito_light"
-        android:text="Driver will arrive at approx. 10:30 hrs"
-        android:textAllCaps="false"
-        android:textColor="@color/secondary_text"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/button_driver_problem_reporting"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <life.sabujak.roundedbutton.RoundedButton
-        android:id="@+id/button_driver_problem_reporting"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:layout_marginBottom="32dp"
-        android:fontFamily="@font/nunito_regular"
-        android:foreground="@drawable/button_outline_brown"
-        android:gravity="center"
-        android:text="@string/finish"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        app:buttonColor="@color/primary"
-        app:buttonCornerRadius="7dp"
-        app:fontFamily="@font/nunito_light"
+        android:layout_weight="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
