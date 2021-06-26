@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_margin="8dp"
     android:background="@drawable/home_linear_layout_outline"
-    tools:context=".FarmerRequisitionActivity">
+    tools:context=".TraderRequisitionActivity">
 
     <TextView
         android:id="@+id/textView7"
@@ -69,6 +69,33 @@
         app:met_textColorHint="@color/black"
         app:met_underlineColor="@color/tertiary_text" />
 
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/edit_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/nunito_regular"
+        android:gravity="center_horizontal"
+        android:hint="Delivery Location"
+        android:inputType="text"
+        android:paddingStart="8dp"
+        android:textAlignment="center"
+        android:textColor="@color/secondary_text"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_produce_quantity"
+        app:met_baseColor="@color/secondary_text"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelTextColor="@color/black"
+        app:met_floatingLabelTextSize="16sp"
+        app:met_primaryColor="@color/secondary_text"
+        app:met_textColor="@color/secondary_text"
+        app:met_textColorHint="@color/black"
+        app:met_underlineColor="@color/tertiary_text" />
+
 
     <com.rengwuxian.materialedittext.MaterialEditText
         android:id="@+id/edit_date"
@@ -79,7 +106,7 @@
         android:layout_marginEnd="8dp"
         android:fontFamily="@font/nunito_regular"
         android:gravity="center_horizontal"
-        android:hint="Expected Pickup Date"
+        android:hint="Expected Delivery Date"
         android:inputType="date"
         android:paddingStart="8dp"
         android:textAlignment="center"
@@ -88,7 +115,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_produce_quantity"
+        app:layout_constraintTop_toBottomOf="@+id/edit_location"
         app:met_baseColor="@color/secondary_text"
         app:met_floatingLabel="highlight"
         app:met_floatingLabelTextColor="@color/black"
