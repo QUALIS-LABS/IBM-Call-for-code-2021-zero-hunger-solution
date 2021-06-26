@@ -17,4 +17,7 @@
 
     <string name="see_all"><u>See all</u></string>
     <string name="view_details"><u>view details</u></string>
+    <string name="problem_reporting">Problem Reporting</string>
+    <string name="problem_severity">problem severity</string>
+    <string name="submit">submit</string>
 </resources>

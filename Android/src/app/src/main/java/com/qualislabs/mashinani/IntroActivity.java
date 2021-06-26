@@ -9,7 +9,7 @@ import android.view.View;
 import life.sabujak.roundedbutton.RoundedButton;
 
 public class IntroActivity extends AppCompatActivity {
-    RoundedButton mRoundedButtonFarmer;
+    RoundedButton mRoundedButtonFarmer, mRoundedButtonDriver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,10 +17,20 @@ public class IntroActivity extends AppCompatActivity {
         setContentView(R.layout.activity_intro);
 
         mRoundedButtonFarmer = (RoundedButton) findViewById(R.id.button_farmer);
+        mRoundedButtonDriver = (RoundedButton) findViewById(R.id.button_driver);
+
         mRoundedButtonFarmer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(IntroActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mRoundedButtonDriver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(IntroActivity.this, DriverProblemReportActivity.class);
                 startActivity(intent);
             }
         });

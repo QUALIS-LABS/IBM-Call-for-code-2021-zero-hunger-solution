@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    android:background="@drawable/home_linear_layout_outline"
+    tools:context=".DriverProblemReportActivity">
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="@string/problem_reporting"
+        android:textAllCaps="false"
+        android:textColor="@color/primary_text"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="128dp"
+        android:fontFamily="@font/nunito_regular"
+        android:text="@string/problem_severity"
+        android:textAllCaps="false"
+        android:textColor="@color/secondary_text"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+
+    <RatingBar
+        android:id="@+id/rating_bar_driver_problem_severity"
+        android:layout_width="235dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:numStars="5"
+        android:secondaryProgressTint="@android:color/transparent"
+        android:progressTint="@color/tertiary_text"
+        android:rating="1"
+        app:layout_constraintEnd_toEndOf="@+id/textView8"
+        app:layout_constraintStart_toStartOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedTextField"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:hint="Describe Problem"
+        android:textColorHint="@color/secondary_text"
+        app:boxStrokeColor="@color/secondary"
+        app:layout_constraintEnd_toEndOf="@+id/rating_bar_driver_problem_severity"
+        app:layout_constraintStart_toStartOf="@+id/rating_bar_driver_problem_severity"
+        app:layout_constraintTop_toBottomOf="@+id/rating_bar_driver_problem_severity">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minLines="3"
+            android:textColor="@color/secondary_text"
+            android:fontFamily="@font/nunito_regular"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <life.sabujak.roundedbutton.RoundedButton
+        android:id="@+id/button_driver_problem_reporting"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="@font/nunito_regular"
+        android:foreground="@drawable/button_outline_brown"
+        android:gravity="center"
+        android:text="@string/submit"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:buttonColor="@color/primary"
+        app:buttonCornerRadius="7dp"
+        app:fontFamily="@font/nunito_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
