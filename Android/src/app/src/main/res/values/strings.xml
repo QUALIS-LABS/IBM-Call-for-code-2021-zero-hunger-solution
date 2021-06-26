@@ -32,4 +32,13 @@
     <string name="finish">Finish</string>
     <string name="report_problem">Report Problem</string>
     <string name="driver_real_time_location">Driver\'s Real-Time Location</string>
+    <string name="requisition_controls">Requisition Controls</string>
+
+    <string-array name="spinner_items">
+        <item>Maize</item>
+        <item>Beans</item>
+        <item>Potatoes</item>
+        <item>Yams</item>
+        <item>Lentils</item>
+    </string-array>
 </resources>
