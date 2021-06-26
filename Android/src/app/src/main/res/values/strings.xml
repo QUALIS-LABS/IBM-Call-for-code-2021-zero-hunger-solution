@@ -20,4 +20,8 @@
     <string name="problem_reporting">Problem Reporting</string>
     <string name="problem_severity">problem severity</string>
     <string name="submit">submit</string>
+    <string name="produce_pickup_checklist">Produce Pickup Checklist</string>
+    <string name="goods_details">Goods Details</string>
+    <string name="driver_to_do_list">Driver To-do List</string>
+    <string name="farmer_details">Farmer\'s Details</string>
 </resources>
