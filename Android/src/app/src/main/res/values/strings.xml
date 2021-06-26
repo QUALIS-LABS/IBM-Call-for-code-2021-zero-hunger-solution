@@ -24,4 +24,7 @@
     <string name="goods_details">Goods Details</string>
     <string name="driver_to_do_list">Driver To-do List</string>
     <string name="farmer_details">Farmer\'s Details</string>
+    <string name="feedback_sheet">Feedback Sheet</string>
+    <string name="rate_delivery">Rate Delivery</string>
+    <string name="notes_on_delivery">Notes on Delivery</string>
 </resources>
