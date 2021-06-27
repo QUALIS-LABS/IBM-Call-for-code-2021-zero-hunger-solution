@@ -1,0 +1,114 @@
+<mat-drawer-container class="drawer-container" autosize>
+
+        <mat-drawer class="dashboard-sidenav" mode="side" opened>
+      
+          <mat-toolbar class="toolbar-nav">
+               <h2> MASHINANI</h2>
+          </mat-toolbar>
+      
+          <div class="dash-nav">
+      
+          <ul>
+            <li>
+              <a mat-button routerLink="overview" routerLinkActive="activelink">
+                <mat-icon>dashboard</mat-icon>
+                Overview
+              </a>
+            </li>
+
+            <li>
+                <a mat-button routerLink="overview" routerLinkActive="activelink">
+                  <mat-icon>local_shipping</mat-icon>
+                  Trips
+                </a>
+              </li>
+      
+            <li>
+              <a mat-button routerLink="courses" routerLinkActive="activelink" >
+                <mat-icon>assignment</mat-icon>
+                Requests
+              </a>
+            </li>
+      
+            <li>
+              <a mat-button routerLink="" routerLinkActive="activelink" >
+                <mat-icon>email</mat-icon>
+                Messaging
+              </a>
+            </li>
+      
+            <li>
+              <a mat-button routerLink="" routerLinkActive="activelink" >
+                <mat-icon>note</mat-icon>
+                Issues
+              </a>
+            </li>
+      
+            <li>
+              <a mat-button routerLink="" routerLinkActive="activelink" >
+                <mat-icon> people</mat-icon>
+                Traders
+              </a>
+            </li>
+      
+            <li>
+              <a mat-button routerLink="" routerLinkActive="activelink" >
+                <mat-icon>people</mat-icon>
+                Drivers
+              </a>
+            </li>
+
+            <li>
+                <a mat-button routerLink="" routerLinkActive="activelink" >
+                  <mat-icon>people</mat-icon>
+                  Drivers
+                </a>
+              </li>
+      
+      
+          </ul>
+          </div>
+      
+      
+        </mat-drawer>
+      
+        <div class="dashboard-content">
+      
+          <div class="dash-content">
+          <mat-toolbar class="toolbar" >
+            
+      
+      
+            <span class="spacer"> </span>
+      
+            <ul>
+      
+              <li>
+                <button mat-icon-button [matMenuTriggerFor]="userMenu" style="color: #838591;">
+                  <mat-icon>account_circle</mat-icon>
+                  </button>
+              </li>
+      
+            </ul>
+      
+            <mat-menu #userMenu="matMenu">
+              <button mat-menu-item (click) = onLogout()>
+                <mat-icon>logout</mat-icon>
+                <span>Log out</span>
+              </button>
+            </mat-menu>
+      
+      
+      
+          </mat-toolbar>
+      
+          <hr>
+      
+          <router-outlet></router-outlet>
+      
+      
+          </div>
+        </div>
+      
+      </mat-drawer-container>
+      
