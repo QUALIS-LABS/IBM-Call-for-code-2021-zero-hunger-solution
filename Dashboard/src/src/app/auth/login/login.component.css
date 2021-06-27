@@ -1,0 +1,47 @@
+:host {
+        display: block;
+        margin: 1rem, auto;
+        text-align: center;
+        align-items: center;
+      }
+      
+      
+mat-form-field,
+textarea {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+mat-error{
+  margin-top: 1rem;
+  margin-bottom: 1 rem;
+}
+
+mat-card{
+  width: 300px;
+  background-color: #ffffff;
+  margin: 3rem auto;
+  align-self: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+button {
+  width: 70%;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+  
+form{
+  margin: auto;
+}
+
+h1{
+  font-family: Mulish;
+}
+  
+  
+  
+  
+  

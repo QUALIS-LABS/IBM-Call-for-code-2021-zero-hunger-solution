@@ -1,0 +1,46 @@
+<mat-card>
+
+        <form (submit) = " onLogin(loginForm)" #loginForm ="ngForm" >
+
+        <img src="../../../assets/images/logo.png" alt="Mashinai logo" width="55%">
+
+        <h1> MASHINANI ADMIN</h1>
+
+        <mat-form-field>
+                <input
+                matInput type = "email"
+                placeholder=" E-mail"
+                #emailInput = "ngModel"
+                ngModel
+                name = "email"
+                required
+                email>
+
+                <mat-error  *ngIf="emailInput.invalid"> Please enter a valid email</mat-error>
+        </mat-form-field>
+
+
+        <mat-form-field>
+
+        <input
+                matInput type = "password"
+                placeholder="Password"
+                #passwordInput = "ngModel"
+                name = "password"
+                ngModel
+                required >
+
+                <mat-error *ngIf="passwordInput.invalid" > Please enter a valid password</mat-error>
+        </mat-form-field>
+
+        <button
+        mat-raised-button
+        type="submit" mat-button color="primary"> Log In</button>
+
+        <div style="margin: 0;">
+                <a mat-button style="margin: 0; padding: 0;"> Forgot Password?</a>
+        </div>
+
+        </form>
+
+</mat-card>
