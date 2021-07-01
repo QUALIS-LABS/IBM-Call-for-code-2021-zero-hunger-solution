@@ -1,23 +1,22 @@
 :host {
-        display: block;
-        margin: 1rem, auto;
-        text-align: center;
-        align-items: center;
-      }
-      
-      
+  display: block;
+  margin: 1rem, auto;
+  text-align: center;
+  align-items: center;
+}
+
 mat-form-field,
 textarea {
   width: 100%;
   margin-top: 2rem;
 }
 
-mat-error{
+mat-error {
   margin-top: 1rem;
   margin-bottom: 1 rem;
 }
 
-mat-card{
+mat-card {
   width: 300px;
   background-color: #ffffff;
   margin: 3rem auto;
@@ -32,16 +31,11 @@ button {
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
-  
-form{
+
+form {
   margin: auto;
 }
 
-h1{
+h1 {
   font-family: Mulish;
 }
-  
-  
-  
-  
-  

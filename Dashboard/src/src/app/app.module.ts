@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from "./auth/login/login.component";
 import { DashboardComponent } from "./dashboard/dashboard.component";
 import { MessagingComponent } from "./dashboard/messaging/messaging.component";
+import { TradersComponent } from "./dashboard/traders/traders.component"
 
 import { MatCardModule} from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
@@ -17,7 +18,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule} from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
-import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import {MatTableModule} from '@angular/material/table';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
@@ -26,7 +28,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppComponent,
     LoginComponent,
     DashboardComponent,
-    MessagingComponent
+    MessagingComponent,
+    TradersComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +45,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatSidenavModule,
     MatIconModule,
     MatMenuModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
