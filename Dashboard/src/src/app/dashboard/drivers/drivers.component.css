@@ -1,0 +1,15 @@
+mat-card {
+  background-color: #ffffff;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+h3{
+        font-family: Mulish;
+        margin: 1rem;
+}
+
+mat-table{
+        margin: 1rem;
+}
