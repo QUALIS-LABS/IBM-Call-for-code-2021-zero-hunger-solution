@@ -1,0 +1,50 @@
+<mat-card>
+
+        <form (submit) = "sendMessage()" #messageForm ="ngForm" >
+
+                <mat-form-field appearance="outline">
+                        <mat-label>Message Title</mat-label>
+                        <input
+                        matInput type = "text"
+                        placeholder=" Title"
+                        #titleInput = "ngModel"
+                        ngModel
+                        name = "title"
+                        required
+                        title>
+                
+                        <mat-error  *ngIf="titleInput.invalid"> Please enter a title for your message</mat-error>
+                </mat-form-field>
+
+
+                <mat-form-field appearance="outline">
+                        <mat-label>Message</mat-label>
+
+                        <textarea
+                                matInput type = "text"
+                                placeholder="Message"
+                                #messageInput = "ngModel"
+                                name = "content"
+                                rows="5"
+                                ngModel
+                                required ></textarea>
+
+                        <mat-error *ngIf="messageInput.invalid" > Please enter a message</mat-error>
+                </mat-form-field>
+
+        <button  
+        mat-raised-button
+        type="submit" mat-button color="primary"> Send Message</button>
+
+        </form>
+
+        <div class="tags_container">
+                <h3> Choose your target audience</h3>
+                <mat-button-toggle-group appearance="legacy" name="fontStyle" aria-label="Mulish">
+                        <mat-button-toggle value="all" color="primary">All Users</mat-button-toggle>
+                        <mat-button-toggle value="app">App Users</mat-button-toggle>
+                        <mat-button-toggle value="text">Text and USSD Users</mat-button-toggle>
+                </mat-button-toggle-group>
+                    
+        </div>
+</mat-card>

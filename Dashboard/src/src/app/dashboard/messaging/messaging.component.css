@@ -1,0 +1,47 @@
+:host {
+  display: block;
+  margin: 1rem, auto;
+  text-align: center;
+  align-items: center;
+}
+
+mat-form-field,
+textarea {
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+mat-error {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+mat-card {
+  background-color: #ffffff;
+  margin: 1rem;
+  display: flex;
+}
+
+.tags_container {
+  border-left: 2px solid #838591;
+  height: auto;
+  left: 60%;
+  margin: 2rem;
+  flex-direction: column;
+  text-align: left;
+}
+
+mat-button-toggle-group {
+  flex-direction: column;
+  margin: 1rem;
+}
+mat-button-toggle{
+        margin-bottom: 1rem;
+}
+
+
+h3 {
+  margin-left: 1rem;
+  font-family: Mulish;
+}
