@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from "./auth/login/login.component";
 import { DashboardComponent } from "./dashboard/dashboard.component";
 import { MessagingComponent } from "./dashboard/messaging/messaging.component";
-import { TradersComponent } from "./dashboard/traders/traders.component"
+import { TradersComponent } from "./dashboard/traders/traders.component";
+import { FarmersComponent } from './dashboard/farmers/farmers.component';
 
 import { MatCardModule} from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
@@ -29,7 +30,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     LoginComponent,
     DashboardComponent,
     MessagingComponent,
-    TradersComponent
+    TradersComponent,
+    FarmersComponent
   ],
   imports: [
     BrowserModule,

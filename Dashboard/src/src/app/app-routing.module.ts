@@ -4,6 +4,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MessagingComponent } from './dashboard/messaging/messaging.component'
 import { TradersComponent } from './dashboard/traders/traders.component';
+import { FarmersComponent } from './dashboard/farmers/farmers.component';
 
 const routes: Routes = [
   {path:'', component: LoginComponent},
@@ -17,6 +18,10 @@ const routes: Routes = [
     {
       path: 'traders',
       component: TradersComponent
+    },
+    {
+      path: 'farmers',
+      component: FarmersComponent
     }
   ]}
 

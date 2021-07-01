@@ -1,0 +1,59 @@
+<mat-card>
+  <h3>Placehlolder data</h3>
+
+  <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="name">
+      <mat-header-cell mat-header-cell *matHeaderCellDef>
+        Name
+      </mat-header-cell>
+      <mat-cell mat-cell *matCellDef="let element">
+        {{ element.name }}
+      </mat-cell>
+    </ng-container>
+
+
+    <ng-container matColumnDef="email">
+      <mat-header-cell mat-header-cell *matHeaderCellDef>
+        Email
+      </mat-header-cell>
+      <mat-cell mat-cell *matCellDef="let element">
+        {{ element.email }}
+      </mat-cell>
+    </ng-container>
+
+
+    <ng-container matColumnDef="phone">
+      <mat-header-cell mat-header-cell *matHeaderCellDef>
+        Phone
+      </mat-header-cell>
+      <mat-cell mat-cell *matCellDef="let element">
+        {{ element.phone }}
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="requisitions">
+      <mat-header-cell mat-header-cell *matHeaderCellDef>
+        Requisitions
+      </mat-header-cell>
+      <mat-cell mat-cell *matCellDef="let element">
+        {{ element.requisitions }}
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="rating">
+      <mat-header-cell mat-header-cell *matHeaderCellDef>
+        Rating
+      </mat-header-cell>
+      <mat-cell mat-cell *matCellDef="let element">
+        {{ element.rating }}
+      </mat-cell>
+    </ng-container>
+
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row
+      matRipple
+      *matRowDef="let row; columns: displayedColumns"
+    ></mat-row>
+  </mat-table>
+</mat-card>
