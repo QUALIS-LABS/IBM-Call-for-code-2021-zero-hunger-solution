@@ -1,0 +1,50 @@
+<div class='summary_cards_container'>
+        <mat-card class="card_summary">
+                <h3> Unresolved Issues</h3>
+                <h1>  70 </h1>
+        </mat-card>
+
+        <mat-card class="card_summary">
+                <h3> Active Trips</h3>
+                <h1>  30 </h1>
+        </mat-card>
+
+        <mat-card class="card_summary">
+                <h3> Today's Requisitions</h3>
+                <h1>  32 </h1>
+        </mat-card>
+
+        <mat-card class="card_summary">
+                <h3> Onhold</h3>
+                <h1>  46 </h1>
+        </mat-card>
+
+
+</div>
+
+<mat-card class="data_presentation">
+        <h3>This Year's Trends</h3>
+
+        <div class="chart_container">
+
+                <div class="chart_area">
+                        <div class="chartjs-container">
+                                <canvas height="100" width="300" baseChart 
+                                    [datasets]="chartDatasets" 
+                                    [labels]="chartLabels" 
+                                    [options]="chartOptions"
+                                    [colors]="chartColors" 
+                                    [legend]="lineChartLegend" 
+                                    [chartType]="'line'" 
+                                    [plugins]="lineChartPlugins">
+                                </canvas>
+                            </div>
+                </div>
+
+
+                <div class="chart_info">
+                        <hr>
+                </div>
+        </div>
+
+</mat-card>

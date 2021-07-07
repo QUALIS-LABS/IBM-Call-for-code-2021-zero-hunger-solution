@@ -6,6 +6,7 @@ import { MessagingComponent } from './dashboard/messaging/messaging.component'
 import { TradersComponent } from './dashboard/traders/traders.component';
 import { FarmersComponent } from './dashboard/farmers/farmers.component';
 import { DriversComponent } from './dashboard/drivers/drivers.component';
+import { OverviewComponent } from './dashboard/overview/overview.component';
 
 const routes: Routes = [
   {path:'', component: LoginComponent},
@@ -15,7 +16,7 @@ const routes: Routes = [
     {
         path: 'messaging',
         component: MessagingComponent
-      },
+    },
     {
       path: 'traders',
       component: TradersComponent
@@ -27,6 +28,10 @@ const routes: Routes = [
     {
       path: 'drivers',
       component: DriversComponent
+    },
+    {
+      path: 'overview',
+      component: OverviewComponent
     }
   ]}
 

@@ -9,6 +9,7 @@ import { MessagingComponent } from "./dashboard/messaging/messaging.component";
 import { TradersComponent } from "./dashboard/traders/traders.component";
 import { FarmersComponent } from './dashboard/farmers/farmers.component';
 import { DriversComponent } from './dashboard/drivers/drivers.component';
+import { OverviewComponent } from './dashboard/overview/overview.component';
 
 import { MatCardModule} from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
@@ -21,7 +22,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule} from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
-import {MatTableModule} from '@angular/material/table';
+import { MatTableModule } from '@angular/material/table';
+import { ChartsModule } from 'ng2-charts';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
@@ -33,7 +35,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MessagingComponent,
     TradersComponent,
     FarmersComponent,
-    DriversComponent
+    DriversComponent,
+    OverviewComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +53,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatIconModule,
     MatMenuModule,
     MatButtonToggleModule,
-    MatTableModule
+    MatTableModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
