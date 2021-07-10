@@ -33,5 +33,5 @@ func main() {
 
 	r.POST("/deleteuser", controllers.DeleteUserByEmail)
 
-	r.Run()
+	r.Run(":3030")
 }
