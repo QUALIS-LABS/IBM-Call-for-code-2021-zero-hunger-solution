@@ -17,7 +17,7 @@ func SetupModels() *gorm.DB {
 	viper_host := viper.Get("POSTGRES_HOST")
 	viper_port := viper.Get("POSTGRES_PORT")
 	//formart
-	prosgret_conname := fmt.Sprintf("host=%v port=%v user=%v dbname=%v password=%v", viper_host, viper_port, viper_user, viper_db, viper_password)
+	prosgret_conname := fmt.Sprintf("host=%v port=%v user=%v dbname=%v password=%v sslmode=disable", viper_host, viper_port, viper_user, viper_db, viper_password)
 	fmt.Println("conname is\t\t", prosgret_conname)
 	db, err := gorm.Open("postgres", prosgret_conname)
 	if err != nil {

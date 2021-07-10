@@ -24,4 +24,4 @@ COPY --from=builder /etc/group /etc/group
 COPY --from=builder /go/bin/hello /go/bin/hello
 USER appuser:appuser
 ENTRYPOINT ["/go/bin/hello"]
-EXPOSE 3000
+EXPOSE 3030
