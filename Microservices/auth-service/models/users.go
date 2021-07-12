@@ -8,15 +8,15 @@ import (
 
 //User details
 type User struct {
-	ID        uint   `json:"id" gorm:"primary_key";"AUTO_INCREMENT"`
-	UserName  string `json:"userName"`
-	Email     string `json:"email"`
-	Password  string `json:"password"`
-	UserType  string `json:"userType"`
-	Token     string `json:"token";sql:"-"`
-	CreatedAt time.Time
-	UpdatedAt time.Time
-	DeletedAt *time.Time
+	ID        uint       `json:"id" gorm:"primary_key";"AUTO_INCREMENT"`
+	UserName  string     `json:"userName"`
+	Email     string     `json:"email"`
+	Password  string     `json:"password"`
+	UserType  string     `json:"userType"`
+	Token     string     `json:"token";sql:"-"`
+	CreatedAt time.Time  `json:"createdAt"`
+	UpdatedAt time.Time  `json:"updatedAt"`
+	DeletedAt *time.Time `json:"deletedAt"`
 }
 
 //CreateUserInput fields
