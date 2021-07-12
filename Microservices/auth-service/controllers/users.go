@@ -34,7 +34,7 @@ func Register(c *gin.Context) {
 	tokenString, _ := token.SignedString([]byte(os.Getenv("token_password")))
 	user2 := models.User{UserName: input.UserName, Email: input.Email, Password: hashPass, UserType: input.UserType, Token: tokenString}
 	db.Create(&user2)
-	c.JSON(http.StatusOK, gin.H{"User": user2, "message": "signUp", "status": true})
+	c.JSON(http.StatusOK, gin.H{"user": user2, "message": "signUp", "status": true})
 }
 
 //Authenticate user /authenticate/
@@ -63,7 +63,7 @@ func Authenticate(c *gin.Context) {
 	tokenString, _ := token.SignedString([]byte(os.Getenv("token_password")))
 	upToken := models.User{Token: tokenString}
 	db.Model(&user).Updates(upToken)
-	c.JSON(http.StatusOK, gin.H{"User": user, "message": "login", "status": true})
+	c.JSON(http.StatusOK, gin.H{"user": user, "message": "login", "status": true})
 }
 
 //UpdateUserDetails changes
