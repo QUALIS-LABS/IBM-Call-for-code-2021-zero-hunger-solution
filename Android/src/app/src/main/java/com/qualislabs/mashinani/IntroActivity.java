@@ -9,7 +9,7 @@ import android.view.View;
 import life.sabujak.roundedbutton.RoundedButton;
 
 public class IntroActivity extends AppCompatActivity {
-    RoundedButton mRoundedButtonFarmer, mRoundedButtonDriver;
+    RoundedButton mRoundedButtonFarmer, mRoundedButtonDriver, mRoundedButtonTrader;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,11 +18,13 @@ public class IntroActivity extends AppCompatActivity {
 
         mRoundedButtonFarmer = (RoundedButton) findViewById(R.id.button_farmer);
         mRoundedButtonDriver = (RoundedButton) findViewById(R.id.button_driver);
+        mRoundedButtonTrader = (RoundedButton) findViewById(R.id.button_trader);
 
         mRoundedButtonFarmer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(IntroActivity.this, LoginActivity.class);
+                intent.putExtra("userType", "farmer");
                 startActivity(intent);
             }
         });
@@ -30,7 +32,17 @@ public class IntroActivity extends AppCompatActivity {
         mRoundedButtonDriver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(IntroActivity.this, DriverTripActivity.class);
+                Intent intent = new Intent(IntroActivity.this, LoginActivity.class);
+                intent.putExtra("userType", "driver");
+                startActivity(intent);
+            }
+        });
+
+        mRoundedButtonTrader.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(IntroActivity.this, LoginActivity.class);
+                intent.putExtra("userType", "trader");
                 startActivity(intent);
             }
         });

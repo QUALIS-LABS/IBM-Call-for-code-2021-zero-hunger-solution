@@ -20,11 +20,12 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.qualislabs.mashinani.Common.Common;
 import com.qualislabs.mashinani.databinding.ActivityHomeBinding;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    TextView mTextViewSeeAllEntries;
+    TextView mTextViewSeeAllEntries, mTextViewHomeUserName, mTextViewHeaderUsername, mTextViewHeaderEmail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,8 +48,16 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         //name for the user
         View headerview = navigationView.getHeaderView(0);
 
-
         mTextViewSeeAllEntries = (TextView)findViewById(R.id.txt_sell_all_schedule);
+        mTextViewHomeUserName = (TextView)findViewById(R.id.txt_username_home);
+        mTextViewHeaderUsername =(TextView)headerview.findViewById(R.id.txt_header_username);
+        mTextViewHeaderEmail =(TextView)headerview.findViewById(R.id.txt_header_email);
+
+
+        mTextViewHomeUserName.setText(Common.currentUser.getUserName());
+        mTextViewHeaderUsername.setText(Common.currentUser.getUserName());
+        mTextViewHeaderEmail.setText(Common.currentUser.getEmail());
+
         mTextViewSeeAllEntries.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
