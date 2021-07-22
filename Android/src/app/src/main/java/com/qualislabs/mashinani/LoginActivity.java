@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -25,19 +26,21 @@ import com.rengwuxian.materialedittext.MaterialEditText;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Pattern;
 
 import life.sabujak.roundedbutton.RoundedButton;
 
 public class LoginActivity extends AppCompatActivity {
 
-    RoundedButton mRoundedButtonLogin;
-    MaterialEditText mMaterialEditTextEmail, mMaterialEditTextPassword;
-    ProgressDialog mProgressDialog;
-    private Boolean mIsAuth;
+    private RoundedButton mRoundedButtonLogin;
+    private MaterialEditText mMaterialEditTextEmail, mMaterialEditTextPassword;
+    private TextView mTextViewGetStarted;
+    private ProgressDialog mProgressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +48,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         mRoundedButtonLogin = (RoundedButton) findViewById(R.id.button_login);
+        mTextViewGetStarted = (TextView) findViewById(R.id.text_get_started);
 
         Intent intent = getIntent();
         String userType = intent.getStringExtra("userType");
@@ -62,6 +66,11 @@ public class LoginActivity extends AppCompatActivity {
                 if (TextUtils.isEmpty(email) || TextUtils.isEmpty(password)){
                     Toast.makeText(LoginActivity.this,
                             "Kindly fill all details to proceed",Toast.LENGTH_LONG).show();
+                }
+                else if (!isValidEmailId(email))
+                {
+                    Toast.makeText(LoginActivity.this,
+                            "Kindly enter a valid email",Toast.LENGTH_LONG).show();
                 }
                 else if ( password.length() < 8 ){
                     Toast.makeText(LoginActivity.this,
@@ -81,15 +90,23 @@ public class LoginActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
 
-
-
                 }
             }
         });
 
+        mTextViewGetStarted.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this, SignupActivity.class);
+                intent.putExtra("userType", userType);
+                startActivity(intent);
+            }
+        });
+
+
     }
 
-    private void loginUser(String email, String password) throws JSONException {
+    public void loginUser(String email, String password) throws JSONException {
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         String URL = "https://bce11cc9f01a.ngrok.io/login";
@@ -172,5 +189,14 @@ public class LoginActivity extends AppCompatActivity {
         };
 
         requestQueue.add(jsonObjReq);
+    }
+
+    private boolean isValidEmailId(String email){
+        return Pattern.compile("^(([\\w-]+\\.)+[\\w-]+|([a-zA-Z]{1}|[\\w-]{2,}))@"
+                + "((([0-1]?[0-9]{1,2}|25[0-5]|2[0-4][0-9])\\.([0-1]?"
+                + "[0-9]{1,2}|25[0-5]|2[0-4][0-9])\\."
+                + "([0-1]?[0-9]{1,2}|25[0-5]|2[0-4][0-9])\\.([0-1]?"
+                + "[0-9]{1,2}|25[0-5]|2[0-4][0-9])){1}|"
+                + "([a-zA-Z]+[\\w-]+\\.)+[a-zA-Z]{2,4})$").matcher(email).matches();
     }
 }
