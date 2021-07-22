@@ -3,10 +3,13 @@ package com.qualislabs.mashinani;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -41,6 +44,7 @@ public class LoginActivity extends AppCompatActivity {
     private MaterialEditText mMaterialEditTextEmail, mMaterialEditTextPassword;
     private TextView mTextViewGetStarted;
     private ProgressDialog mProgressDialog;
+    private CheckBox mCheckBoxRememberMe;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +53,8 @@ public class LoginActivity extends AppCompatActivity {
 
         mRoundedButtonLogin = (RoundedButton) findViewById(R.id.button_login);
         mTextViewGetStarted = (TextView) findViewById(R.id.text_get_started);
+
+        mCheckBoxRememberMe = (CheckBox)findViewById(R.id.checkbox_rememberme);
 
         Intent intent = getIntent();
         String userType = intent.getStringExtra("userType");
@@ -106,10 +112,10 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-    public void loginUser(String email, String password) throws JSONException {
+    private void loginUser(String email, String password) throws JSONException {
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
-        String URL = "https://bce11cc9f01a.ngrok.io/login";
+        String URL = "https://6e2ebd754dc9.ngrok.io/login";
 
         final Map<String, String>[] authMap = new Map[]{new HashMap<>()};
         authMap[0].put("email", email);
@@ -153,6 +159,15 @@ public class LoginActivity extends AppCompatActivity {
 
                             if (user != null) {
                                 Common.currentUser = user;
+
+                                if (mCheckBoxRememberMe.isChecked()) {
+                                    try {
+                                        rememberUser(userJson);
+                                    } catch (JSONException e) {
+                                        e.printStackTrace();
+                                    }
+                                }
+
 
                                 mProgressDialog.dismiss();
                                 Intent intent = new Intent(LoginActivity.this,
@@ -199,4 +214,16 @@ public class LoginActivity extends AppCompatActivity {
                 + "[0-9]{1,2}|25[0-5]|2[0-4][0-9])){1}|"
                 + "([a-zA-Z]+[\\w-]+\\.)+[a-zA-Z]{2,4})$").matcher(email).matches();
     }
+
+    private void rememberUser(JSONObject userJson) throws JSONException {
+        SharedPreferences shared = getSharedPreferences("com.qualislabs.mashinani", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = shared.edit();
+        editor.putInt("userID", userJson.getInt("id"));
+        editor.putString("userName", userJson.getString("userName"));
+        editor.putString("email", userJson.getString("email"));
+        editor.putString("userType", userJson.getString("userType"));
+        editor.putString("token", userJson.getString("token"));
+        editor.commit();
+    }
+
 }
