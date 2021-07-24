@@ -25,4 +25,6 @@ type CreateFeedbackInput struct {
 type AverageRating struct {
 	CreatorId     uint    `json:"creatorId"`
 	AverageRating float64 `json:"averageRating"`
+	Sums          int     `json:"sums"`
+	Counts        int     `json:"counts"`
 }

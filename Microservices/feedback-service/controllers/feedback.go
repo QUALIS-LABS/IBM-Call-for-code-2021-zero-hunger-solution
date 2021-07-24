@@ -43,15 +43,16 @@ func FindAverageRating(c *gin.Context) {
 	//get model
 	var feedback models.Feedback
 	var averageRating models.AverageRating
-	if err := db.Model(&feedback).Select("creator_id, avg(rating) as averageRating").Where("creator_id = ?", c.Param("id")).Group("creator_id").First(&averageRating).Error; err != nil {
+	if err := db.Model(&feedback).Select("creator_id, sum(rating) as sums, count(rating) as counts").Where("creator_id = ?", c.Param("id")).Group("creator_id").Scan(&averageRating).Error; err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": "Record not found!"})
 		return
 	}
+	averageRating.AverageRating = float64(averageRating.Sums) / float64(averageRating.Counts)
 
 	c.JSON(http.StatusOK, gin.H{"data": averageRating})
 }
 
-//delete requisition /requisition/:id
+//delete feedback /feedback/:id
 func DeleteFeedback(c *gin.Context) {
 	db := c.MustGet("db").(*gorm.DB)
 	//get model
