@@ -34,6 +34,7 @@ public class IntroActivity extends AppCompatActivity {
 
             Common.currentUser = new User(userName, email, userType, token, userId);
             Intent intent = new Intent(IntroActivity.this, HomeActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
         }
 

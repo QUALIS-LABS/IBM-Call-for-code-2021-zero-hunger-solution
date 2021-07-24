@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -26,6 +27,7 @@ import com.qualislabs.mashinani.databinding.ActivityHomeBinding;
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     TextView mTextViewSeeAllEntries, mTextViewHomeUserName, mTextViewHeaderUsername, mTextViewHeaderEmail;
+    ImageView mImageViewNext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +55,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         mTextViewHeaderUsername =(TextView)headerview.findViewById(R.id.txt_header_username);
         mTextViewHeaderEmail =(TextView)headerview.findViewById(R.id.txt_header_email);
 
+        mImageViewNext = (ImageView)findViewById(R.id.img_next);
+
 
         mTextViewHomeUserName.setText(Common.currentUser.getUserName());
         mTextViewHeaderUsername.setText(Common.currentUser.getUserName());
@@ -62,6 +66,20 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             @Override
             public void onClick(View view) {
                 Intent intent =  new Intent(HomeActivity.this, HistoryActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mImageViewNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = null;
+                if (Common.currentUser.getUserType().equals("farmer"))
+                    intent =  new Intent(HomeActivity.this, FarmerRequisitionActivity.class);
+                else if (Common.currentUser.getUserType().equals("trader"))
+                    intent =  new Intent(HomeActivity.this, TraderRequisitionActivity.class);
+                else
+                    intent =  new Intent(HomeActivity.this, DriverTripActivity.class);
                 startActivity(intent);
             }
         });
