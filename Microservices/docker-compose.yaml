@@ -39,3 +39,14 @@ services:
       - database.env # configure postgres
     links:
       - db
+  feedback:
+    build: ./feedback-service
+    ports:
+      - '4040:4040'
+    environment:
+      POSTGRES_HOST: db
+      POSTGRES_PORT: 5432
+    env_file:
+      - database.env # configure postgres
+    links:
+      - db
