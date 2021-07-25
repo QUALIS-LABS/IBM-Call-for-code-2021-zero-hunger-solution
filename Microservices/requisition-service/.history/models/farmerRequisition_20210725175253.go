@@ -25,7 +25,6 @@ type CreateFarmerRequisitionInput struct {
 	Quantity             int    `json:"quantity"`
 	ExpectedDeliveryDate string `json:"expectedDeliveryDate"`
 	SpecialInstructions  string `json:"specialInstructions";sql:"-"`
-	PickupLocation       string `json:"pickupLocation"`
 	CreatorId            uint   `json:"creatorId"`
 	Status               string `json:"status"`
 }

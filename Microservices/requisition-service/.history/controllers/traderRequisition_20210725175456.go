@@ -6,39 +6,40 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/jinzhu/gorm"
+	_ "github.com/jinzhu/gorm"
 )
 
 //get all requisitions
-func FindFarmerRequisitions(c *gin.Context) {
+func FindTraderRequisitions(c *gin.Context) {
 	db := c.MustGet("db").(*gorm.DB)
 
-	var requisitions []models.FarmerRequisition
+	var requisitions []models.TraderRequisition
 	db.Find(&requisitions)
 
 	c.JSON(http.StatusOK, gin.H{"data": requisitions})
 }
 
 //create requisition record
-func CreateFarmerRequisition(c *gin.Context) {
+func CreateTraderRequisition(c *gin.Context) {
 	db := c.MustGet("db").(*gorm.DB)
 
-	var input models.CreateFarmerRequisitionInput
+	var input models.CreateTraderRequisitionInput
 	if err := c.ShouldBindJSON(&input); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		return
 	}
 	//create requisition
-	requisition := models.FarmerRequisition{ProductType: input.ProductType, Quantity: input.Quantity, ExpectedDeliveryDate: input.ExpectedDeliveryDate, SpecialInstructions: input.SpecialInstructions, CreatorId: input.CreatorId, PickupLocation: input.PickupLocation, Status: input.Status}
+	requisition := models.TraderRequisition{ProductType: input.ProductType, Quantity: input.Quantity, DeliveryLocation: input.DeliveryLocation, ExpectedDeliveryDate: input.ExpectedDeliveryDate, SpecialInstructions: input.SpecialInstructions, Repeats: input.Repeats, RepeatDate: input.RepeatDate, CreatorId: input.CreatorId, Status: input.Status}
 	db.Create(&requisition)
 	c.JSON(http.StatusOK, gin.H{"data": requisition})
 }
 
 //find requisitions by id /requisition/:id
-func FindFarmerRequisition(c *gin.Context) {
+func FindTraderRequisition(c *gin.Context) {
 	db := c.MustGet("db").(*gorm.DB)
 
 	//get model
-	var requisition models.FarmerRequisition
+	var requisition models.TraderRequisition
 	if err := db.Where("id = ?", c.Param("id")).First(&requisition).Error; err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": "Record not found!"})
 		return
@@ -48,15 +49,15 @@ func FindFarmerRequisition(c *gin.Context) {
 }
 
 //update requisition
-func UpdateFarmerRequisitions(c *gin.Context) {
+func UpdateTraderRequisitions(c *gin.Context) {
 	db := c.MustGet("db").(*gorm.DB)
 	//get model
-	var requisition models.FarmerRequisition
+	var requisition models.TraderRequisition
 	if err := db.Where("id = ?", c.Param("id")).First(&requisition).Error; err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": "Record not found!"})
 		return
 	}
-	var input models.CreateFarmerRequisitionInput
+	var input models.CreateTraderRequisitionInput
 	if err := c.ShouldBindJSON(&input); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		return
@@ -66,10 +67,10 @@ func UpdateFarmerRequisitions(c *gin.Context) {
 }
 
 //delete requisition /requisition/:id
-func DeleteFarmerRequisition(c *gin.Context) {
+func DeleteTraderRequisition(c *gin.Context) {
 	db := c.MustGet("db").(*gorm.DB)
 	//get model
-	var requisition models.FarmerRequisition
+	var requisition models.TraderRequisition
 	if err := db.Where("id = ?", c.Param("id")).First(&requisition).Error; err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": "Record not found!"})
 		return
