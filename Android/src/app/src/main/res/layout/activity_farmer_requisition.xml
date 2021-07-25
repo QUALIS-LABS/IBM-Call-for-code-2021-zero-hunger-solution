@@ -83,12 +83,45 @@
         android:inputType="date"
         android:paddingStart="8dp"
         android:textAlignment="center"
+        android:clickable="true"
+        android:focusable="false"
         android:textColor="@color/secondary_text"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_produce_quantity"
+        app:met_baseColor="@color/secondary_text"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelTextColor="@color/black"
+        app:met_floatingLabelTextSize="16sp"
+        app:met_primaryColor="@color/secondary_text"
+        app:met_textColor="@color/secondary_text"
+        app:met_textColorHint="@color/black"
+        app:met_underlineColor="@color/tertiary_text" />
+
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/edit_pickup_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:clickable="true"
+        android:focusable="false"
+        android:fontFamily="@font/nunito_regular"
+        android:gravity="center_horizontal"
+        android:hint="Pickup Location"
+        android:inputType="text"
+        android:paddingStart="8dp"
+        android:textAlignment="center"
+        android:textColor="@color/secondary_text"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_date"
         app:met_baseColor="@color/secondary_text"
         app:met_floatingLabel="highlight"
         app:met_floatingLabelTextColor="@color/black"
@@ -113,10 +146,12 @@
         app:hintTextAppearance="@style/HintLabel"
         app:hintTextColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edit_date">
+        app:layout_constraintTop_toBottomOf="@+id/edit_pickup_location">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_instructions"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/nunito_regular"
@@ -124,7 +159,6 @@
             android:textColor="@color/secondary_text" />
 
     </com.google.android.material.textfield.TextInputLayout>
-
 
     <life.sabujak.roundedbutton.RoundedButton
         android:id="@+id/button_farmer_requisition"

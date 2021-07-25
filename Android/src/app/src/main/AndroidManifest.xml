@@ -4,6 +4,7 @@
     package="com.qualislabs.mashinani">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permisssion.ACCESS_COARSE_LOCATION"></uses-permission>
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
@@ -38,7 +39,7 @@
 
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyBBp4gJ4sa_NW0SpmfffmZlFHPAyoEDYys" />
+            android:value="AIzaSyC1mqv3W0bo4YaKfOgCyQOYXX76r1Ji8EA" />
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
