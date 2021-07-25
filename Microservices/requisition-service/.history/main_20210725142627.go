@@ -33,16 +33,16 @@ func main() {
 
 	r.DELETE("/traderRequisition/:id", controllers.DeleteTraderRequisition)
 
-	//farmer routes
-	r.GET("/farmerRequisitions", controllers.FindFarmerRequisitions)
+	//trader routes
+	r.GET("/farmerRequisitions", controllers.FindTraderRequisitions)
 
-	r.POST("/farmerRequisition", controllers.CreateFarmerRequisition)
+	r.POST("/farmerRequisition", controllers.CreateTraderRequisition)
 
-	r.GET("/farmerRequisition/:id", controllers.FindFarmerRequisition)
+	r.GET("/farmerRequisition/:id", controllers.FindTraderRequisition)
 
-	r.PATCH("/farmerRequisition/:id", controllers.UpdateFarmerRequisitions)
+	r.PATCH("/farmerRequisition/:id", controllers.UpdateTraderRequisitions)
 
-	r.DELETE("/farmerRequisition/:id", controllers.DeleteFarmerRequisition)
+	r.DELETE("/farmerRequisition/:id", controllers.DeleteTraderRequisition)
 
 	r.Run(":4000")
 }

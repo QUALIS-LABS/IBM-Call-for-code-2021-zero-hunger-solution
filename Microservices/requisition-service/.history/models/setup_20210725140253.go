@@ -24,6 +24,6 @@ func SetupModels() *gorm.DB {
 		fmt.Println(err)
 		panic("Failed to connect to database!")
 	}
-	db.AutoMigrate(&FarmerRequisition{}, &TraderRequisition{})
+	db.AutoMigrate(&FarmerRequisition{}, &TraderRequisition)
 	return db
 }
