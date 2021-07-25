@@ -22,7 +22,7 @@ func main() {
 		c.Next()
 	})
 
-	//trader routes
+	//routes
 	r.GET("/traderRequisitions", controllers.FindTraderRequisitions)
 
 	r.POST("/traderRequisition", controllers.CreateTraderRequisition)
@@ -32,17 +32,6 @@ func main() {
 	r.PATCH("/traderRequisition/:id", controllers.UpdateTraderRequisitions)
 
 	r.DELETE("/traderRequisition/:id", controllers.DeleteTraderRequisition)
-
-	//farmer routes
-	r.GET("/farmerRequisitions", controllers.FindFarmerRequisitions)
-
-	r.POST("/farmerRequisition", controllers.CreateFarmerRequisition)
-
-	r.GET("/farmerRequisition/:id", controllers.FindFarmerRequisition)
-
-	r.PATCH("/farmerRequisition/:id", controllers.UpdateFarmerRequisitions)
-
-	r.DELETE("/farmerRequisition/:id", controllers.DeleteFarmerRequisition)
 
 	r.Run(":4000")
 }
