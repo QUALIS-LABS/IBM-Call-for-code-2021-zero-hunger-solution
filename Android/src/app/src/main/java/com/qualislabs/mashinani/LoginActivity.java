@@ -115,16 +115,16 @@ public class LoginActivity extends AppCompatActivity {
     private void loginUser(String email, String password) throws JSONException {
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
-        String URL = "https://68012ddb0cfb.ngrok.io/login";
+        String URL = "https://1b8306c84d01.ngrok.io/login";
 
-        final Map<String, String>[] authMap = new Map[]{new HashMap<>()};
-        authMap[0].put("email", email);
-        authMap[0].put("password", password);
+        final Map<String, String> authMap = new HashMap<>();
+        authMap.put("email", email);
+        authMap.put("password", password);
 
         Gson gson = new Gson();
-        String json = gson.toJson(authMap[0]);
+        String json = gson.toJson(authMap);
 
-        final Boolean[] authStatus = {false};
+        final Boolean[] authStatus = {null};
         JsonObjectRequest jsonObjReq = new JsonObjectRequest(
                 Request.Method.POST, URL, new JSONObject(json),
                 new Response.Listener<JSONObject>() {
@@ -141,7 +141,7 @@ public class LoginActivity extends AppCompatActivity {
                         if (authStatus[0]) {
                             JSONObject userJson = null;
                             try {
-                                userJson = response.getJSONObject("User");
+                                userJson = response.getJSONObject("user");
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }

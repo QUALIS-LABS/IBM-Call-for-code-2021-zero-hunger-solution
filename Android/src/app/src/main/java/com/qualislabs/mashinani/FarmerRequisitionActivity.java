@@ -7,7 +7,6 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.Spinner;
@@ -23,7 +22,6 @@ import com.android.volley.toolbox.Volley;
 import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
 import com.google.android.gms.common.GooglePlayServicesRepairableException;
 import com.google.android.gms.location.places.Place;
-import com.google.android.gms.location.places.Places;
 import com.google.android.gms.location.places.ui.PlacePicker;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
@@ -62,10 +60,10 @@ public class FarmerRequisitionActivity extends AppCompatActivity {
 
         mCalendar = Calendar.getInstance();
 
-        mMaterialEditTextBags = (MaterialEditText)findViewById(R.id.edit_produce_quantity); 
-        mMaterialEditTextDate = (MaterialEditText)findViewById(R.id.edit_date); 
+        mMaterialEditTextBags = (MaterialEditText)findViewById(R.id.edit_trader_produce_quantity);
+        mMaterialEditTextDate = (MaterialEditText)findViewById(R.id.edit_delivery_date);
         mMaterialEditTextPickupLocation = (MaterialEditText)findViewById(R.id.edit_pickup_location);
-        mSpinnerProduce = (Spinner)findViewById(R.id.spinner_produce);
+        mSpinnerProduce = (Spinner)findViewById(R.id.spinner_trader_produce);
         mTextInputEditTextInstructions = (TextInputEditText) findViewById(R.id.edit_instructions);
 
         mRoundedButton = (RoundedButton)findViewById(R.id.button_farmer_requisition);

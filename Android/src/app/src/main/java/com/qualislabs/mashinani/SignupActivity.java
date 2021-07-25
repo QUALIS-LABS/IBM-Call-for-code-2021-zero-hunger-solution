@@ -150,7 +150,7 @@ public class SignupActivity extends AppCompatActivity {
                         if (authStatus[0]) {
                             JSONObject userJson = null;
                             try {
-                                userJson = response.getJSONObject("User");
+                                userJson = response.getJSONObject("user");
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }

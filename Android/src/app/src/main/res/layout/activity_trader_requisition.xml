@@ -25,7 +25,7 @@
 
 
     <Spinner
-        android:id="@+id/spinner_produce"
+        android:id="@+id/spinner_trader_produce"
         style="@android:style/Widget.Material.Spinner.Underlined"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -43,7 +43,7 @@
 
 
     <com.rengwuxian.materialedittext.MaterialEditText
-        android:id="@+id/edit_produce_quantity"
+        android:id="@+id/edit_trader_produce_quantity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -59,7 +59,7 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner_produce"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_trader_produce"
         app:met_baseColor="@color/secondary_text"
         app:met_floatingLabel="highlight"
         app:met_floatingLabelTextColor="@color/black"
@@ -70,7 +70,7 @@
         app:met_underlineColor="@color/tertiary_text" />
 
     <com.rengwuxian.materialedittext.MaterialEditText
-        android:id="@+id/edit_location"
+        android:id="@+id/edit_delivery_location"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -82,11 +82,13 @@
         android:inputType="text"
         android:paddingStart="8dp"
         android:textAlignment="center"
+        android:clickable="true"
+        android:focusable="false"
         android:textColor="@color/secondary_text"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_produce_quantity"
+        app:layout_constraintTop_toBottomOf="@+id/edit_trader_produce_quantity"
         app:met_baseColor="@color/secondary_text"
         app:met_floatingLabel="highlight"
         app:met_floatingLabelTextColor="@color/black"
@@ -98,7 +100,7 @@
 
 
     <com.rengwuxian.materialedittext.MaterialEditText
-        android:id="@+id/edit_date"
+        android:id="@+id/edit_delivery_date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -110,12 +112,14 @@
         android:inputType="date"
         android:paddingStart="8dp"
         android:textAlignment="center"
+        android:clickable="true"
+        android:focusable="false"
         android:textColor="@color/secondary_text"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_location"
+        app:layout_constraintTop_toBottomOf="@+id/edit_delivery_location"
         app:met_baseColor="@color/secondary_text"
         app:met_floatingLabel="highlight"
         app:met_floatingLabelTextColor="@color/black"
@@ -141,11 +145,12 @@
         app:hintTextColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edit_date">
+        app:layout_constraintTop_toBottomOf="@id/edit_delivery_date">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/edit_trader_instructions"
             android:fontFamily="@font/nunito_regular"
             android:minLines="4"
             android:textColor="@color/secondary_text" />
