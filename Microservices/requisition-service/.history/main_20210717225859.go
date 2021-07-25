@@ -23,15 +23,15 @@ func main() {
 	})
 
 	//routes
-	r.GET("/traderRequisitions", controllers.FindTraderRequisitions)
+	r.GET("/requisitions", controllers.FindRequisitions)
 
-	r.POST("/traderRequisition", controllers.CreateTraderRequisition)
+	r.POST("/requisition", controllers.CreateRequisition)
 
-	r.GET("/traderRequisition/:id", controllers.FindTraderRequisition)
+	r.GET("/requisition/:id", controllers.FindRequisition)
 
-	r.PATCH("/traderRequisition/:id", controllers.UpdateTraderRequisitions)
+	r.PATCH("/requisition/:id", controllers.UpdateRequisitions)
 
-	r.DELETE("/traderRequisition/:id", controllers.DeleteTraderRequisition)
+	r.DELETE("/requisition/:id", controllers.DeleteRequisition)
 
 	r.Run(":4000")
 }
