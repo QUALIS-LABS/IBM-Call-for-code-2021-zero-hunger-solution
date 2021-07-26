@@ -119,7 +119,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         } else if (id == R.id.nav_logout) {
             // Log out
-            Intent signIn = new Intent (HomeActivity.this, LoginActivity.class);
+            Intent signIn = new Intent (HomeActivity.this, IntroActivity.class);
             signIn.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(signIn);
 
