@@ -50,3 +50,14 @@ services:
       - database.env # configure postgres
     links:
       - db
+  trip:
+    build: ./trip-service
+    ports: 
+      - '4080:4080'
+    environment: 
+      POSTGRES_HOST: db
+      POSTGRES_PORT: 5432
+    env_file: 
+      - database.env
+    links:
+      - db    

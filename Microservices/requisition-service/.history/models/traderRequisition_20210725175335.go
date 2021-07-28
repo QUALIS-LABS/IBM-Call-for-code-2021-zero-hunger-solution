@@ -31,5 +31,4 @@ type CreateTraderRequisitionInput struct {
 	Repeats              bool   `json:"repeats"`
 	RepeatDate           string `json:"repeatDate"`
 	CreatorId            uint   `json:"creatorId"`
-	Status               string `json:"status"`
 }

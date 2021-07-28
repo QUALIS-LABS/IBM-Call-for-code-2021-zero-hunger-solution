@@ -3,13 +3,13 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    io.kompose.service: requisition
-  name: requisition
+    io.kompose.service: trip
+  name: trip
 spec:
   replicas: 1
   selector:
     matchLabels:
-      io.kompose.service: requisition
+      io.kompose.service: trip
   strategy: {}
   template:
     metadata:
@@ -18,7 +18,7 @@ spec:
         kompose.version: 1.21.0 (992df58d8)
       creationTimestamp: null
       labels:
-        io.kompose.service: requisition
+        io.kompose.service: trip
     spec:
       containers:
       - env:
@@ -47,11 +47,11 @@ spec:
             configMapKeyRef:
               key: POSTGRES_USER
               name: database-env
-        image: sammyoina/qualis-mashinani-requisition:v0.0.2
+        image: sammyoina/qualis-mashinani-trips:v0.0.1
         imagePullPolicy: ""
-        name: requisition
+        name: auth
         ports:
-        - containerPort: 4000
+        - containerPort: 4080
         resources: {}
       restartPolicy: Always
       serviceAccountName: ""

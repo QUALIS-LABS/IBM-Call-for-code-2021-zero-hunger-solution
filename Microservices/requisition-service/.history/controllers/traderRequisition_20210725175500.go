@@ -28,16 +28,7 @@ func CreateTraderRequisition(c *gin.Context) {
 		return
 	}
 	//create requisition
-	requisition := models.TraderRequisition{
-		ProductType:          input.ProductType,
-		Quantity:             input.Quantity,
-		DeliveryLocation:     input.DeliveryLocation,
-		ExpectedDeliveryDate: input.ExpectedDeliveryDate,
-		SpecialInstructions:  input.SpecialInstructions,
-		Repeats:              input.Repeats,
-		RepeatDate:           input.RepeatDate,
-		CreatorId:            input.CreatorId,
-		Status:               "active"}
+	requisition := models.TraderRequisition{ProductType: input.ProductType, Quantity: input.Quantity, DeliveryLocation: input.DeliveryLocation, ExpectedDeliveryDate: input.ExpectedDeliveryDate, SpecialInstructions: input.SpecialInstructions, Repeats: input.Repeats, RepeatDate: input.RepeatDate, CreatorId: input.CreatorId, Status: input.Status}
 	db.Create(&requisition)
 	c.JSON(http.StatusOK, gin.H{"data": requisition})
 }
