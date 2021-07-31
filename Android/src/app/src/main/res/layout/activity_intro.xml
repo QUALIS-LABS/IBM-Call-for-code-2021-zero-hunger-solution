@@ -62,12 +62,12 @@
         app:buttonColor="@color/primary"
         app:buttonCornerRadius="7dp"
         app:fontFamily="@font/nunito_light"
-        app:layout_constraintBottom_toTopOf="@+id/button_trader"
-        app:layout_constraintEnd_toEndOf="@+id/button_trader"
-        app:layout_constraintStart_toStartOf="@+id/button_trader" />
+        app:layout_constraintBottom_toTopOf="@+id/button_driver_report_problem"
+        app:layout_constraintEnd_toEndOf="@+id/button_driver_report_problem"
+        app:layout_constraintStart_toStartOf="@+id/button_driver_report_problem" />
 
     <life.sabujak.roundedbutton.RoundedButton
-        android:id="@+id/button_trader"
+        android:id="@+id/button_driver_report_problem"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_gravity="center"

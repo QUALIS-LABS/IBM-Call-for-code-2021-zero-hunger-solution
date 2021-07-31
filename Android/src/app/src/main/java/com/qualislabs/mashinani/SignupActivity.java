@@ -122,7 +122,7 @@ public class SignupActivity extends AppCompatActivity {
 
     private void registerUser(String userName, String email, String password) throws JSONException {
         RequestQueue requestQueue = Volley.newRequestQueue(this);
-        String URL = "https://68012ddb0cfb.ngrok.io/register";
+        String URL = "http://169.57.99.69:31949/register";
 
         final Map<String, String> registerMap = new HashMap<>();
         registerMap.put("userName", userName);

@@ -139,7 +139,7 @@ public class TraderRequisitionActivity extends AppCompatActivity {
 
     private void submitRequisition(String produce, int bags, String date, String instructions, String latLong) throws JSONException {
         RequestQueue requestQueue = Volley.newRequestQueue(TraderRequisitionActivity.this);
-        String URL = "https://c22b338bb6a3.ngrok.io/traderRequisition";
+        String URL = "http://169.57.99.69:30692/traderRequisition";
 
         final Map<String, Object> reqDataMap = new HashMap<>();
         reqDataMap.put("productType", produce);

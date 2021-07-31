@@ -115,7 +115,7 @@ public class LoginActivity extends AppCompatActivity {
     private void loginUser(String email, String password) throws JSONException {
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
-        String URL = "https://1b8306c84d01.ngrok.io/login";
+        String URL = " http://169.57.99.69:31949/login";
 
         final Map<String, String> authMap = new HashMap<>();
         authMap.put("email", email);

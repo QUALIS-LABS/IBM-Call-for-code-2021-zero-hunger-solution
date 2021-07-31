@@ -140,7 +140,7 @@ public class FarmerRequisitionActivity extends AppCompatActivity {
 
     private void submitRequisition(String produce, int bags, String date, String instructions, String latLong) throws JSONException {
         RequestQueue requestQueue = Volley.newRequestQueue(FarmerRequisitionActivity.this);
-        String URL = "https://ddaa0292c6a2.ngrok.io/farmerRequisition";
+        String URL = "http://169.57.99.69:30692/farmerRequisition";
 
         final Map<String, Object> reqDataMap = new HashMap<>();
         reqDataMap.put("productType", produce);

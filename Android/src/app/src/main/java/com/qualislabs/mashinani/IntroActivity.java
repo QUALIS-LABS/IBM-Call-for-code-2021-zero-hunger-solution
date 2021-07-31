@@ -2,7 +2,6 @@ package com.qualislabs.mashinani;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -40,7 +39,7 @@ public class IntroActivity extends AppCompatActivity {
 
         mRoundedButtonFarmer = (RoundedButton) findViewById(R.id.button_farmer);
         mRoundedButtonDriver = (RoundedButton) findViewById(R.id.button_driver);
-        mRoundedButtonTrader = (RoundedButton) findViewById(R.id.button_trader);
+        mRoundedButtonTrader = (RoundedButton) findViewById(R.id.button_driver_report_problem);
 
         mRoundedButtonFarmer.setOnClickListener(new View.OnClickListener() {
             @Override

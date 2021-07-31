@@ -55,6 +55,9 @@ public class PickupItemAdapter extends RecyclerView.Adapter  {
 
                 Intent intent =  new Intent(context, GoodsPickupActivity.class);
                 intent.putExtra("requisitionId", pickupListItems.get(position).getId() + "");
+
+                if (position == pickupListItems.size() - 1)
+                    intent.putExtra("lastItem",  true);
                 context.startActivity(intent);
 
             }

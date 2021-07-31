@@ -139,7 +139,7 @@
                     android:layout_gravity="center_vertical|center_horizontal"
                     android:layout_margin="5dp"
                     android:fontFamily="@font/nunito_regular"
-                    android:text="Monday, Jan 29, 08:00AM - 09:00AM"
+                    android:text="Thursday, Aug 05, 08:00AM"
                     android:textAllCaps="false"
                     android:textColor="#4D4F5C"
                     android:textSize="15sp" />

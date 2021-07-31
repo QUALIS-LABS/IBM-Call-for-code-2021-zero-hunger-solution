@@ -1,6 +1,8 @@
 package com.qualislabs.mashinani;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -22,7 +24,9 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.qualislabs.mashinani.Common.Common;
-import com.qualislabs.mashinani.databinding.ActivityHomeBinding;
+import com.qualislabs.mashinani.Models.FarmerRequisition;
+
+import java.sql.Driver;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -121,6 +125,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             // Log out
             Intent signIn = new Intent (HomeActivity.this, IntroActivity.class);
             signIn.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            SharedPreferences sharedPreferences = this.getSharedPreferences("com.qualislabs.mashinani", Context.MODE_PRIVATE);
+            sharedPreferences.edit().clear().apply();
             startActivity(signIn);
 
         }
