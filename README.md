@@ -37,7 +37,7 @@ Scalability plan. We expect to onboard other users in addition to traders and fa
 - [Sammy Kerata Oina](https://www.linkedin.com/in/sammy-oina-b1774110b/)
 - [Smith Jilks](https://www.linkedin.com/in/jilks-smith-56ba74173/)
 - Rodney Osodo
-- Washington Kamadi
+- [Washington Kamadi](https://www.linkedin.com/in/washingtonkk/)
 - [Felix Wanyoike]( https://www.linkedin.com/in/felix-gateru-72a110149/)
 
 <a href="https://github.com/QUALIS-LABS/IBM-Call-for-code-2021-zero-hunger-solution/graphs/contributors">
