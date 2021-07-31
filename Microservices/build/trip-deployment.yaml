@@ -47,7 +47,7 @@ spec:
             configMapKeyRef:
               key: POSTGRES_USER
               name: database-env
-        image: sammyoina/qualis-mashinani-trips:v0.0.2
+        image: sammyoina/qualis-mashinani-trips:v0.0.3
         imagePullPolicy: ""
         name: trip
         ports:
