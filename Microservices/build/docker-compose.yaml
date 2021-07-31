@@ -51,7 +51,7 @@ services:
     links:
       - db
   trip:
-    image: 'sammyoina/qualis-mashinani-trips:v0.0.2'
+    image: 'sammyoina/qualis-mashinani-trips:v0.0.3'
     ports:
       - '4080:4080'
     environment: 
