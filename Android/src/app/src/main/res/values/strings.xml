@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">Mashinani</string>
+    <string name="get_started"><u>Get Started</u></string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="metrics">Metrics</string>
+    <string name="account">Account</string>
+    <string name="payment">Payment</string>
+    <string name="settings">Settings</string>
+    <string name="help">Help</string>
+    <string name="sign_out">Sign Out</string>
+
+    <string name="see_all"><u>See all</u></string>
+    <string name="view_details"><u>view details</u></string>
+    <string name="problem_reporting">Problem Reporting</string>
+    <string name="problem_severity">problem severity</string>
+    <string name="submit">submit</string>
+    <string name="produce_pickup_checklist">Produce Pickup Checklist</string>
+    <string name="goods_details">Goods Details</string>
+    <string name="driver_to_do_list">Driver To-do List</string>
+    <string name="farmer_details">Farmer\'s Details</string>
+    <string name="feedback_sheet">Feedback Sheet</string>
+    <string name="rate_delivery">Rate Delivery</string>
+    <string name="notes_on_delivery">Notes on Delivery</string>
+    <string name="driver_tracking">Driver Tracking</string>
+    <string name="log_pickup">Log Pickup</string>
+    <string name="finish">Finish</string>
+    <string name="report_problem">Report Problem</string>
+    <string name="driver_real_time_location">Driver\'s Real-Time Location</string>
+    <string name="requisition_controls">Requisition Controls</string>
+
+    <string-array name="spinner_items">
+        <item>Maize</item>
+        <item>Beans</item>
+        <item>Potatoes</item>
+        <item>Yams</item>
+        <item>Lentils</item>
+    </string-array>
+</resources>

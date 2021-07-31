@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="primary">#682117</color>
+    <color name="primary_light">#59682117</color>
+    <color name="secondary">#686e77</color>
+    <color name="accent">#fbc900</color>
+
+    <color name="primary_background">#14F4F3F3</color>
+    <color name="status_bar">#14F4F3F3</color>
+
+    <color name="primary_text">#682117</color>
+    <color name="secondary_text">#686e77</color>
+    <color name="tertiary_text">#fbc900</color>
+
+    <color name="button_outline_yellow">#fbc900</color>
+    <color name="button_outline_brown">#682117</color>
+
+    <color name="color_divider_lines">#4D4F5C</color>
+    <color name="bottom_sheet_color">#5B682117</color>
+
+
+
+
+
+
+</resources>
