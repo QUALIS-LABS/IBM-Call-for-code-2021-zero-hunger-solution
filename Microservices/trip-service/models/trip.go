@@ -12,7 +12,7 @@ type Trip struct {
 	DriverID            int            `json:"driverId"`
 	TripName            string         `json:"tripName"`
 	TraderRequisitionID uint           `json:"traderRequisitionID"`
-	FarmerRequisitionID pq.StringArray `json:"farmerRequisitionId gorm:"type:text[]"`
+	FarmerRequisitionID pq.StringArray `json:"farmerRequisitionId" gorm:"type:text[]"`
 	Status              string         `json:"status"`
 	CreatedAt           time.Time      `json:"createdAt"`
 	UpdatedAt           time.Time      `json:"updatedAt"`
@@ -24,6 +24,6 @@ type CreateTripInput struct {
 	DriverID            int            `json:"driverId"`
 	TripName            string         `json:"tripName"`
 	TraderRequisitionID uint           `json:"traderRequisitionID"`
-	FarmerRequisitionID pq.StringArray `json:"farmerRequisitionId gorm:"type:text[]"`
+	FarmerRequisitionID pq.StringArray `json:"farmerRequisitionId" gorm:"type:text[]"`
 	Status              string         `json:"status"`
 }
