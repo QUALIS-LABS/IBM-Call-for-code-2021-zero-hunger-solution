@@ -21,7 +21,7 @@ A lot of technological solutions tend to require good internet connectivity and 
 Scalability plan. We expect to onboard other users in addition to traders and farmers who can come together, pull resources and order food produce directly from the farmers. This will reduce food wastage tha occurs as goods await purchase in the market and increase savings. Eventually, with the data collected we will provide accurate predictions to farmers on our platform on the types of crops to grow during a given period of the year.
 
 ## Video
- [![](./thumbnail.png)](youtube.com/...)
+ ![](./thumbnail.png)(youtube.com/...)
 ## Architecture 
 ![](./Architecture/src/architecture.png)
 1. Steps..
@@ -31,4 +31,12 @@ Scalability plan. We expect to onboard other users in addition to traders and fa
 - IBM Watson Assistant: Intelligent virtual agent
 ## Walkthrough
 
+## Contributing
+
+## Authors
+- [Sammy Kerata Oina](https://www.linkedin.com/in/sammy-oina-b1774110b/)
+- Smith Jilks
+- Rodney Osodo
+- Washington Kamadi
+- Felix Wanyoike
 
