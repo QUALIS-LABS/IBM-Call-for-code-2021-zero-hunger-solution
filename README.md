@@ -35,7 +35,7 @@ Scalability plan. We expect to onboard other users in addition to traders and fa
 
 ## Authors
 - [Sammy Kerata Oina](https://www.linkedin.com/in/sammy-oina-b1774110b/)
-- Smith Jilks
+- [Smith Jilks](https://www.linkedin.com/in/jilks-smith-56ba74173/)
 - Rodney Osodo
 - Washington Kamadi
 - Felix Wanyoike
