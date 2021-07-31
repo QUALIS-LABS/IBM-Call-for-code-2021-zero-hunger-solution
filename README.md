@@ -40,3 +40,8 @@ Scalability plan. We expect to onboard other users in addition to traders and fa
 - Washington Kamadi
 - Felix Wanyoike
 
+<a href="https://github.com/QUALIS-LABS/IBM-Call-for-code-2021-zero-hunger-solution/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=QUALIS-LABS/IBM-Call-for-code-2021-zero-hunger-solution" />
+</a>
+
+Made with [contributors-img](https://contrib.rocks).
