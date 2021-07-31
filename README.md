@@ -23,7 +23,7 @@ Scalability plan. We expect to onboard other users in addition to traders and fa
 ## Video
 
 ## Architecture 
-![](./Architecture/src/architecture.svg)
+![](./Architecture/src/architecture.png)
 1. 
 
 ### IBM Cloud services used
